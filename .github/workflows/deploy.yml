@@ -30,6 +30,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: tests_app/build/html
+          publish_dir: ./DAW/RA6/Pagina-backend-docs/tests_app/build/html
           force_orphan: true
           

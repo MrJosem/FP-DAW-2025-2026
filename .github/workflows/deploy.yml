@@ -1,6 +1,13 @@
 name: "Push Docs Check"
 on:
   workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: "Select the deployment environment"
+        options:
+          - docs
+          - deploy-bucket
 
 jobs:
   docs:
@@ -15,13 +22,11 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.13"
-          cache: 'pip'
+          cache: "pip"
 
       - name: Install dependencies
         run: pip install -r ./DAW/RA6/Pagina-backend-docs/requirements.txt
 
-      # - uses: ammaraskar/sphinx-action@master
-        # with:
       - name: Generating documentation
         run: make html
         working-directory: "./DAW/RA6/Pagina-backend-docs/tests_app"
@@ -32,4 +37,39 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./DAW/RA6/Pagina-backend-docs/tests_app/build/html
           force_orphan: true
-          
+
+  deploy-bucket:
+    runs-on: ubuntu-latest
+
+    env:
+      aws_region: us-east-1
+
+    steps:
+      - name: Ckeckout repository
+        uses: actions/checkout@v4
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
+          aws-region: ${{ env.aws_region }}
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Initialize Terraform
+        working-directory: terraform
+        run: terraform init
+
+      - name: Terraform plan
+        working-directory: terraform
+        run: terraform plan
+
+      - name: Terraform apply
+        working-directory: terraform
+        run: terraform apply -auto-approve
+
+      - name: Upload terraform-state to S3
+        run: aws s3 cp ./terraform/terraform.tfstate s3://jose-manuel-bucket-tfstate/terraform.tfstate

@@ -1,5 +1,5 @@
 aws_region    = "us-east-1"
 name          = "bucket-s3-jose-manuel"
-access_key    = ""
-secret_key    = ""
-session_token = ""
+access_key    = "ASIA2UC3BHTC2T4MN6C3"
+secret_key    = "lRDfYA6t0ECV0as/Q6hoZpKr8/V0qk0qaxOCstuF"
+session_token = "IQoJb3JpZ2luX2VjEOr//////////wEaCXVzLXdlc3QtMiJHMEUCIGLw28ebR89RHAx73JA36ubs8kH+RMtW4zhxcvWXqx9KAiEAtDyU5BfVLoJ7wVOGtvspMoplMES9Ndg1EpRv9TgFCGAqpgIIcxAAGgw3MzAzMzUzNjIyNDUiDEYUmfkqkfrxcbNEZyqDArlEZpTIi+NExit7QxqsPKphsGepkt3ubDqhyACE7LGh9PqVYypoV4RQj5ZOasWjOypRk+ZnF5A2EEJUjKMJtqt3AWPe1roR/jK1ecRW6U2M/b3Y5rkfNs1DqnSPUTtB3ZNscHib/9qsWB+NDLsKIVmRPN57HQ2uONllyrzlM40kYOA3oyypBUMKo3ORdu3iMslXW5SMVk5DcmpumlRvm/NqN2AjkRgYBuGiUmSRk04T9X+4q1cXZR48AmGqV4qR3fe0922y3RY16YJFQZ20+QQFlsbAT2Kt9HhuTDO/M9wZQel+wU3ISxOhtANwcl7D6fTgQnyTYUB1VeImCR890mS6zf8wkpjUxgY6nQHuK38tr+S23srufn9lniGoZIycj8anL0dKacCrVSe6UvGYtg1gWVcJZTuHPlNW8iYWPdTi3xiWHZ3Eab4LN9lORj4GCRztkSHZld10mzDrh3BeGerEq6kF8cADMrTSNodhzVdRiq7k1xsYG8wWJuivulGeVekl/hGXxjXQjKj0NNxPVQBs2rXZBJjTBeli17nN5fxsXGR/V7UpINc2"

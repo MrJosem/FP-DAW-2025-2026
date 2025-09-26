@@ -1,4 +1,4 @@
-name: "Docs + deploy with bucket s3"
+name: "Deploy on gh-pages"
 on:
     workflow_dispatch:
         inputs:

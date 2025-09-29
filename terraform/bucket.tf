@@ -69,8 +69,8 @@ resource "aws_s3_bucket_website_configuration" "bucket_website" {
 }
 
 data "local_file" "web_files" {
-  for_each = fileset("../DAW/RA6/Pagina-backend-docs/tests_app/templates", "**")
-  filename = "${abspath("../DAW/RA6/Pagina-backend-docs/tests_app/templates")}/${each.key}"
+  for_each = fileset("../DAW/RA6/Pagina-noBack-noDocks/src", "**")
+  filename = "${abspath("../DAW/RA6/Pagina-noBack-noDocks/src")}/${each.key}"
 }
 
 resource "aws_s3_object" "object-upload" {

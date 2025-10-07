@@ -11,6 +11,7 @@ on:
 
 jobs:
   docs:
+    if: github.event_name == 'docs'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -31,14 +32,23 @@ jobs:
         run: make html
         working-directory: "./DAW/RA6/Pagina-backend-docs/docs"
 
+      - name: Push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Automated update from GitHub Actions"
+          git push origin main
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./DAW/RA6/Pagina-backend-docs/tests_app/build/html
+          publish_dir: ./DAW/RA6/Pagina-backend-docs/docs/build/html
           force_orphan: true
 
   deploy-bucket:
+    if: github.event_name == 'deploy-bucket'
     runs-on: ubuntu-latest
 
     env:

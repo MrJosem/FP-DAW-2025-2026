@@ -29,7 +29,7 @@ jobs:
 
       - name: Generating documentation
         run: make html
-        working-directory: "./DAW/RA6/Pagina-backend-docs/tests_app"
+        working-directory: "./DAW/RA6/Pagina-backend-docs/docs"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

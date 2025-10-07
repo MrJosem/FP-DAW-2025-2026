@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="es" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tests_app.views &#8212; documentación de Refugio Digital - 1.0</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/nature.css?v=279e0f84" />
+    <script src="../../_static/documentation_options.js?v=4936afed"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=f85f4cfb"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Índice de Módulos Python"
+             >módulos</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">documentación de Refugio Digital - 1.0</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Código de módulo</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">tests_app.views</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Código fuente para tests_app.views</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span><span class="w"> </span><span class="nn">django.shortcuts</span><span class="w"> </span><span class="kn">import</span> <span class="n">render</span><span class="p">,</span> <span class="n">redirect</span><span class="p">,</span> <span class="n">get_object_or_404</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Test</span><span class="p">,</span> <span class="n">Pregunta</span><span class="p">,</span> <span class="n">Respuesta</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">usuarios_app.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Usuario</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.forms</span><span class="w"> </span><span class="kn">import</span> <span class="n">TestForm</span><span class="p">,</span> <span class="n">PreguntaForm</span><span class="p">,</span> <span class="n">RespuestaForm</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.contrib</span><span class="w"> </span><span class="kn">import</span> <span class="n">messages</span>
+
+
+<span class="c1"># Create your views here.</span>
+<div class="viewcode-block" id="index">
+<a class="viewcode-back" href="../../tests_app.html#tests_app.views.index">[documentos]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Vista para listar todos los tests disponibles.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tests</span> <span class="o">=</span> <span class="n">Test</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;index_tests.html&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="s1">&#39;tests&#39;</span><span class="p">:</span> <span class="n">tests</span> <span class="p">})</span></div>
+
+
+
+<div class="viewcode-block" id="crear_test">
+<a class="viewcode-back" href="../../tests_app.html#tests_app.views.crear_test">[documentos]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">crear_test</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Vista para la creación de un nuevo test.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">test</span> <span class="o">=</span> <span class="n">Test</span><span class="p">()</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">TestForm</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s2">&quot;POST&quot;</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">TestForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+            <span class="n">test</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">commit</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">test</span><span class="o">.</span><span class="n">autor</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span>
+            <span class="n">test</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+            <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;El test ha sido creado correctamente.&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;index_tests&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;crear_test.html&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="s1">&#39;form&#39;</span><span class="p">:</span> <span class="n">form</span> <span class="p">})</span></div>
+
+
+
+<div class="viewcode-block" id="ver_preguntas">
+<a class="viewcode-back" href="../../tests_app.html#tests_app.views.ver_preguntas">[documentos]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">ver_preguntas</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">pk</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Vista para mostrar todas las preguntas de un test específico.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">test</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">Test</span><span class="p">,</span> <span class="n">pk</span><span class="o">=</span><span class="n">pk</span><span class="p">)</span>
+    <span class="n">preguntas</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">preguntas</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;ver_preguntas.html&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="s1">&#39;preguntas&#39;</span><span class="p">:</span> <span class="n">preguntas</span><span class="p">,</span> <span class="s1">&#39;test&#39;</span><span class="p">:</span> <span class="n">test</span> <span class="p">})</span></div>
+
+
+
+<div class="viewcode-block" id="agregar_pregunta">
+<a class="viewcode-back" href="../../tests_app.html#tests_app.views.agregar_pregunta">[documentos]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">agregar_pregunta</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">pk</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Vista para agregar una nueva pregunta a un test específico.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">test</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">Test</span><span class="p">,</span> <span class="n">pk</span><span class="o">=</span><span class="n">pk</span><span class="p">)</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">PreguntaForm</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s2">&quot;POST&quot;</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">PreguntaForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+            <span class="n">pregunta</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">commit</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">pregunta</span><span class="o">.</span><span class="n">test</span> <span class="o">=</span> <span class="n">test</span>
+            <span class="n">pregunta</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+            <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;La pregunta ha sido agregada correctamente.&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;index_tests&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;agregar_pregunta.html&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="s1">&#39;form&#39;</span><span class="p">:</span> <span class="n">form</span> <span class="p">})</span></div>
+
+
+
+<div class="viewcode-block" id="eliminar_test">
+<a class="viewcode-back" href="../../tests_app.html#tests_app.views.eliminar_test">[documentos]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">eliminar_test</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">pk</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Vista para eliminar un test existente.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">test</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">Test</span><span class="p">,</span> <span class="n">pk</span><span class="o">=</span><span class="n">pk</span><span class="p">)</span>
+    <span class="n">test</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+    <span class="n">messages</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;El test ha sido eliminado correctamente.&#39;</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;index_tests&#39;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="editar_pregunta">
+<a class="viewcode-back" href="../../tests_app.html#tests_app.views.editar_pregunta">[documentos]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">editar_pregunta</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">pkPregunta</span><span class="p">,</span> <span class="n">pkTest</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Vista para editar una pregunta específica dentro de un test.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">test</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">Test</span><span class="p">,</span> <span class="n">pk</span><span class="o">=</span><span class="n">pkTest</span><span class="p">)</span>
+    <span class="n">pregunta</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">Pregunta</span><span class="p">,</span> <span class="n">pk</span><span class="o">=</span><span class="n">pkPregunta</span><span class="p">)</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">PreguntaForm</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s2">&quot;POST&quot;</span><span class="p">:</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="n">PreguntaForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span><span class="n">pregunta</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+            <span class="n">pregunta</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+            <span class="n">messages</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;La pregunta ha sido editada correctamente.&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;ver_preguntas&#39;</span><span class="p">,</span> <span class="n">pkTest</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;editar_pregunta.html&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="s1">&#39;form&#39;</span><span class="p">:</span> <span class="n">form</span> <span class="p">})</span></div>
+
+    
+
+<div class="viewcode-block" id="eliminar_pregunta">
+<a class="viewcode-back" href="../../tests_app.html#tests_app.views.eliminar_pregunta">[documentos]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">eliminar_pregunta</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">pkPregunta</span><span class="p">,</span> <span class="n">pkTest</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Vista para eliminar una pregunta específica dentro de un test.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">pregunta</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">Pregunta</span><span class="p">,</span> <span class="n">pk</span><span class="o">=</span><span class="n">pkPregunta</span><span class="p">)</span>
+    <span class="n">pregunta</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+    <span class="n">messages</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;La pregunta ha sido eliminada correctamente.&#39;</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;ver_preguntas&#39;</span><span class="p">,</span> <span class="n">pkTest</span><span class="p">)</span></div>
+
+</pre></div>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="Índice General"
+             >índice</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Índice de Módulos Python"
+             >módulos</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">documentación de Refugio Digital - 1.0</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Código de módulo</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">tests_app.views</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2025, JM, AP, AO, GR.
+      Creado usando <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

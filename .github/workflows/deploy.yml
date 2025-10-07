@@ -11,7 +11,7 @@ on:
 
 jobs:
   docs:
-    if: ${{ github.event.inputs == 'docs'}}
+    if: ${{ github.event.inputs.environment == 'docs'}}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -48,7 +48,7 @@ jobs:
           force_orphan: true
 
   deploy-bucket:
-    if: ${{ github.event.inputs == 'deploy-bucket'}}
+    if: ${{ github.event.inputs.environment == 'deploy-bucket'}}
     runs-on: ubuntu-latest
 
     env:

@@ -1,157 +1,51 @@
-
-
 <!DOCTYPE html>
-<html class="writer-html5" lang="es" data-content_root="./">
-<head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>foro_app package &mdash; documentación de Refugio Digital - 1.0</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+<html lang="es" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  
-      <script src="_static/jquery.js?v=5d32c60e"></script>
-      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=4936afed"></script>
-      <script src="_static/doctools.js?v=9bcbadda"></script>
-      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script src="_static/translations.js?v=f85f4cfb"></script>
-    <script src="_static/js/theme.js"></script>
+    <title>foro_app package &#8212; documentación de Refugio Digital - 1.0</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css?v=279e0f84" />
+    <script src="_static/documentation_options.js?v=4936afed"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/translations.js?v=f85f4cfb"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="tests_app.migrations package" href="tests_app.migrations.html" />
     <link rel="prev" title="foro_app.migrations package" href="foro_app.migrations.html" /> 
-</head>
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Índice de Módulos Python"
+             >módulos</a> |</li>
+        <li class="right" >
+          <a href="tests_app.migrations.html" title="tests_app.migrations package"
+             accesskey="N">siguiente</a> |</li>
+        <li class="right" >
+          <a href="foro_app.migrations.html" title="foro_app.migrations package"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">documentación de Refugio Digital - 1.0</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">foro_app package</a></li> 
+      </ul>
+    </div>  
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-
-          
-          
-          <a href="index.html" class="icon icon-home">
-            Refugio Digital
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="chat_app.migrations.html">chat_app.migrations package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chat_app.html">chat_app package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="foro_app.migrations.html">foro_app.migrations package</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">foro_app package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="foro_app.migrations.html">foro_app.migrations package</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-foro_app.admin">foro_app.admin module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-foro_app.apps">foro_app.apps module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#foro_app.apps.ForoAppConfig"><code class="docutils literal notranslate"><span class="pre">ForoAppConfig</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.apps.ForoAppConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">ForoAppConfig.default_auto_field</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.apps.ForoAppConfig.name"><code class="docutils literal notranslate"><span class="pre">ForoAppConfig.name</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#module-foro_app.forms">foro_app.forms module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#foro_app.forms.ComentarioForm"><code class="docutils literal notranslate"><span class="pre">ComentarioForm</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.forms.ComentarioForm.Meta"><code class="docutils literal notranslate"><span class="pre">ComentarioForm.Meta</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.forms.ComentarioForm.base_fields"><code class="docutils literal notranslate"><span class="pre">ComentarioForm.base_fields</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.forms.ComentarioForm.declared_fields"><code class="docutils literal notranslate"><span class="pre">ComentarioForm.declared_fields</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.forms.ComentarioForm.media"><code class="docutils literal notranslate"><span class="pre">ComentarioForm.media</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#foro_app.forms.PublicacionForm"><code class="docutils literal notranslate"><span class="pre">PublicacionForm</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.forms.PublicacionForm.Meta"><code class="docutils literal notranslate"><span class="pre">PublicacionForm.Meta</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.forms.PublicacionForm.base_fields"><code class="docutils literal notranslate"><span class="pre">PublicacionForm.base_fields</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.forms.PublicacionForm.declared_fields"><code class="docutils literal notranslate"><span class="pre">PublicacionForm.declared_fields</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.forms.PublicacionForm.media"><code class="docutils literal notranslate"><span class="pre">PublicacionForm.media</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#module-foro_app.models">foro_app.models module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#foro_app.models.Comentario"><code class="docutils literal notranslate"><span class="pre">Comentario</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Comentario.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Comentario.DoesNotExist</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Comentario.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Comentario.MultipleObjectsReturned</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Comentario.contacto"><code class="docutils literal notranslate"><span class="pre">Comentario.contacto</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Comentario.contacto_id"><code class="docutils literal notranslate"><span class="pre">Comentario.contacto_id</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Comentario.fecha"><code class="docutils literal notranslate"><span class="pre">Comentario.fecha</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Comentario.get_next_by_fecha"><code class="docutils literal notranslate"><span class="pre">Comentario.get_next_by_fecha()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Comentario.get_previous_by_fecha"><code class="docutils literal notranslate"><span class="pre">Comentario.get_previous_by_fecha()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Comentario.id"><code class="docutils literal notranslate"><span class="pre">Comentario.id</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Comentario.objects"><code class="docutils literal notranslate"><span class="pre">Comentario.objects</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Comentario.publicacion"><code class="docutils literal notranslate"><span class="pre">Comentario.publicacion</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Comentario.publicacion_id"><code class="docutils literal notranslate"><span class="pre">Comentario.publicacion_id</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Comentario.texto"><code class="docutils literal notranslate"><span class="pre">Comentario.texto</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#foro_app.models.Publicacion"><code class="docutils literal notranslate"><span class="pre">Publicacion</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Publicacion.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Publicacion.DoesNotExist</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Publicacion.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Publicacion.MultipleObjectsReturned</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Publicacion.autor"><code class="docutils literal notranslate"><span class="pre">Publicacion.autor</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Publicacion.autor_id"><code class="docutils literal notranslate"><span class="pre">Publicacion.autor_id</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Publicacion.chats"><code class="docutils literal notranslate"><span class="pre">Publicacion.chats</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Publicacion.comentarios"><code class="docutils literal notranslate"><span class="pre">Publicacion.comentarios</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Publicacion.contenido"><code class="docutils literal notranslate"><span class="pre">Publicacion.contenido</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Publicacion.fecha"><code class="docutils literal notranslate"><span class="pre">Publicacion.fecha</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Publicacion.get_next_by_fecha"><code class="docutils literal notranslate"><span class="pre">Publicacion.get_next_by_fecha()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Publicacion.get_previous_by_fecha"><code class="docutils literal notranslate"><span class="pre">Publicacion.get_previous_by_fecha()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Publicacion.id"><code class="docutils literal notranslate"><span class="pre">Publicacion.id</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Publicacion.objects"><code class="docutils literal notranslate"><span class="pre">Publicacion.objects</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#foro_app.models.Publicacion.publicacion"><code class="docutils literal notranslate"><span class="pre">Publicacion.publicacion</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#module-foro_app.tests">foro_app.tests module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-foro_app.views">foro_app.views module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#foro_app.views.crear_publicacion"><code class="docutils literal notranslate"><span class="pre">crear_publicacion()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#foro_app.views.foro"><code class="docutils literal notranslate"><span class="pre">foro()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#module-foro_app">Module contents</a></li>
-</ul>
-</li>
-</ul>
-
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Refugio Digital</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">foro_app package</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="_sources/foro_app.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
   <section id="foro-app-package">
-<h1>foro_app package<a class="headerlink" href="#foro-app-package" title="Link to this heading"></a></h1>
+<h1>foro_app package<a class="headerlink" href="#foro-app-package" title="Link to this heading">¶</a></h1>
 <section id="subpackages">
-<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="foro_app.migrations.html">foro_app.migrations package</a><ul>
@@ -172,71 +66,71 @@
 </div>
 </section>
 <section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
 </section>
 <section id="module-foro_app.admin">
-<span id="foro-app-admin-module"></span><h2>foro_app.admin module<a class="headerlink" href="#module-foro_app.admin" title="Link to this heading"></a></h2>
+<span id="foro-app-admin-module"></span><h2>foro_app.admin module<a class="headerlink" href="#module-foro_app.admin" title="Link to this heading">¶</a></h2>
 </section>
 <section id="module-foro_app.apps">
-<span id="foro-app-apps-module"></span><h2>foro_app.apps module<a class="headerlink" href="#module-foro_app.apps" title="Link to this heading"></a></h2>
+<span id="foro-app-apps-module"></span><h2>foro_app.apps module<a class="headerlink" href="#module-foro_app.apps" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="foro_app.apps.ForoAppConfig">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">foro_app.apps.</span></span><span class="sig-name descname"><span class="pre">ForoAppConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/foro_app/apps.html#ForoAppConfig"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#foro_app.apps.ForoAppConfig" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">foro_app.apps.</span></span><span class="sig-name descname"><span class="pre">ForoAppConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/foro_app/apps.html#ForoAppConfig"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#foro_app.apps.ForoAppConfig" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AppConfig</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.apps.ForoAppConfig.default_auto_field">
-<span class="sig-name descname"><span class="pre">default_auto_field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django.db.models.BigAutoField'</span></em><a class="headerlink" href="#foro_app.apps.ForoAppConfig.default_auto_field" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">default_auto_field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django.db.models.BigAutoField'</span></em><a class="headerlink" href="#foro_app.apps.ForoAppConfig.default_auto_field" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.apps.ForoAppConfig.name">
-<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'foro_app'</span></em><a class="headerlink" href="#foro_app.apps.ForoAppConfig.name" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'foro_app'</span></em><a class="headerlink" href="#foro_app.apps.ForoAppConfig.name" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="module-foro_app.forms">
-<span id="foro-app-forms-module"></span><h2>foro_app.forms module<a class="headerlink" href="#module-foro_app.forms" title="Link to this heading"></a></h2>
+<span id="foro-app-forms-module"></span><h2>foro_app.forms module<a class="headerlink" href="#module-foro_app.forms" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="foro_app.forms.ComentarioForm">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">foro_app.forms.</span></span><span class="sig-name descname"><span class="pre">ComentarioForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/foro_app/forms.html#ComentarioForm"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#foro_app.forms.ComentarioForm" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">foro_app.forms.</span></span><span class="sig-name descname"><span class="pre">ComentarioForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/foro_app/forms.html#ComentarioForm"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#foro_app.forms.ComentarioForm" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelForm</span></code></p>
 <dl class="py class">
 <dt class="sig sig-object py" id="foro_app.forms.ComentarioForm.Meta">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/foro_app/forms.html#ComentarioForm.Meta"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#foro_app.forms.ComentarioForm.Meta" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/foro_app/forms.html#ComentarioForm.Meta"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#foro_app.forms.ComentarioForm.Meta" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.forms.ComentarioForm.Meta.fields">
-<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['publicacion',</span> <span class="pre">'texto']</span></em><a class="headerlink" href="#foro_app.forms.ComentarioForm.Meta.fields" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['publicacion',</span> <span class="pre">'texto']</span></em><a class="headerlink" href="#foro_app.forms.ComentarioForm.Meta.fields" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.forms.ComentarioForm.Meta.model">
-<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#foro_app.forms.ComentarioForm.Meta.model" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#foro_app.forms.ComentarioForm.Meta.model" title="Link to this definition">¶</a></dt>
 <dd><p>alias de <a class="reference internal" href="#foro_app.models.Comentario" title="foro_app.models.Comentario"><code class="xref py py-class docutils literal notranslate"><span class="pre">Comentario</span></code></a></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.forms.ComentarioForm.Meta.widgets">
-<span class="sig-name descname"><span class="pre">widgets</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'publicacion':</span> <span class="pre">&lt;django.forms.widgets.HiddenInput</span> <span class="pre">object&gt;,</span> <span class="pre">'texto':</span> <span class="pre">&lt;django.forms.widgets.Textarea</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#foro_app.forms.ComentarioForm.Meta.widgets" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">widgets</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'publicacion':</span> <span class="pre">&lt;django.forms.widgets.HiddenInput</span> <span class="pre">object&gt;,</span> <span class="pre">'texto':</span> <span class="pre">&lt;django.forms.widgets.Textarea</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#foro_app.forms.ComentarioForm.Meta.widgets" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.forms.ComentarioForm.base_fields">
-<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'publicacion':</span> <span class="pre">&lt;django.forms.models.ModelChoiceField</span> <span class="pre">object&gt;,</span> <span class="pre">'texto':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#foro_app.forms.ComentarioForm.base_fields" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'publicacion':</span> <span class="pre">&lt;django.forms.models.ModelChoiceField</span> <span class="pre">object&gt;,</span> <span class="pre">'texto':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#foro_app.forms.ComentarioForm.base_fields" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.forms.ComentarioForm.declared_fields">
-<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#foro_app.forms.ComentarioForm.declared_fields" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#foro_app.forms.ComentarioForm.declared_fields" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="foro_app.forms.ComentarioForm.media">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#foro_app.forms.ComentarioForm.media" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#foro_app.forms.ComentarioForm.media" title="Link to this definition">¶</a></dt>
 <dd><p>Return all media required to render the widgets on this form.</p>
 </dd></dl>
 
@@ -244,48 +138,48 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="foro_app.forms.PublicacionForm">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">foro_app.forms.</span></span><span class="sig-name descname"><span class="pre">PublicacionForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/foro_app/forms.html#PublicacionForm"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#foro_app.forms.PublicacionForm" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">foro_app.forms.</span></span><span class="sig-name descname"><span class="pre">PublicacionForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/foro_app/forms.html#PublicacionForm"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#foro_app.forms.PublicacionForm" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelForm</span></code></p>
 <dl class="py class">
 <dt class="sig sig-object py" id="foro_app.forms.PublicacionForm.Meta">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/foro_app/forms.html#PublicacionForm.Meta"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#foro_app.forms.PublicacionForm.Meta" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/foro_app/forms.html#PublicacionForm.Meta"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#foro_app.forms.PublicacionForm.Meta" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.forms.PublicacionForm.Meta.exclude">
-<span class="sig-name descname"><span class="pre">exclude</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['fecha',</span> <span class="pre">'comentarios']</span></em><a class="headerlink" href="#foro_app.forms.PublicacionForm.Meta.exclude" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">exclude</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['fecha',</span> <span class="pre">'comentarios']</span></em><a class="headerlink" href="#foro_app.forms.PublicacionForm.Meta.exclude" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.forms.PublicacionForm.Meta.fields">
-<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['contenido']</span></em><a class="headerlink" href="#foro_app.forms.PublicacionForm.Meta.fields" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['contenido']</span></em><a class="headerlink" href="#foro_app.forms.PublicacionForm.Meta.fields" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.forms.PublicacionForm.Meta.model">
-<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#foro_app.forms.PublicacionForm.Meta.model" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#foro_app.forms.PublicacionForm.Meta.model" title="Link to this definition">¶</a></dt>
 <dd><p>alias de <a class="reference internal" href="#foro_app.models.Publicacion" title="foro_app.models.Publicacion"><code class="xref py py-class docutils literal notranslate"><span class="pre">Publicacion</span></code></a></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.forms.PublicacionForm.Meta.widgets">
-<span class="sig-name descname"><span class="pre">widgets</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'contenido':</span> <span class="pre">&lt;django.forms.widgets.Textarea</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#foro_app.forms.PublicacionForm.Meta.widgets" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">widgets</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'contenido':</span> <span class="pre">&lt;django.forms.widgets.Textarea</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#foro_app.forms.PublicacionForm.Meta.widgets" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.forms.PublicacionForm.base_fields">
-<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'contenido':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#foro_app.forms.PublicacionForm.base_fields" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'contenido':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#foro_app.forms.PublicacionForm.base_fields" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.forms.PublicacionForm.declared_fields">
-<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#foro_app.forms.PublicacionForm.declared_fields" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#foro_app.forms.PublicacionForm.declared_fields" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="foro_app.forms.PublicacionForm.media">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#foro_app.forms.PublicacionForm.media" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#foro_app.forms.PublicacionForm.media" title="Link to this definition">¶</a></dt>
 <dd><p>Return all media required to render the widgets on this form.</p>
 </dd></dl>
 
@@ -293,26 +187,26 @@
 
 </section>
 <section id="module-foro_app.models">
-<span id="foro-app-models-module"></span><h2>foro_app.models module<a class="headerlink" href="#module-foro_app.models" title="Link to this heading"></a></h2>
+<span id="foro-app-models-module"></span><h2>foro_app.models module<a class="headerlink" href="#module-foro_app.models" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="foro_app.models.Comentario">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">foro_app.models.</span></span><span class="sig-name descname"><span class="pre">Comentario</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contacto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publicacion</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fecha</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/foro_app/models.html#Comentario"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#foro_app.models.Comentario" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">foro_app.models.</span></span><span class="sig-name descname"><span class="pre">Comentario</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contacto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publicacion</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fecha</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/foro_app/models.html#Comentario"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#foro_app.models.Comentario" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
 <dl class="py exception">
 <dt class="sig sig-object py" id="foro_app.models.Comentario.DoesNotExist">
-<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#foro_app.models.Comentario.DoesNotExist" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#foro_app.models.Comentario.DoesNotExist" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
 </dd></dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="foro_app.models.Comentario.MultipleObjectsReturned">
-<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#foro_app.models.Comentario.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#foro_app.models.Comentario.MultipleObjectsReturned" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.models.Comentario.contacto">
-<span class="sig-name descname"><span class="pre">contacto</span></span><a class="headerlink" href="#foro_app.models.Comentario.contacto" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">contacto</span></span><a class="headerlink" href="#foro_app.models.Comentario.contacto" title="Link to this definition">¶</a></dt>
 <dd><p>Accessor to the related object on the forward side of a many-to-one or
 one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
 <p>In the example:</p>
@@ -325,41 +219,41 @@ one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.models.Comentario.contacto_id">
-<span class="sig-name descname"><span class="pre">contacto_id</span></span><a class="headerlink" href="#foro_app.models.Comentario.contacto_id" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">contacto_id</span></span><a class="headerlink" href="#foro_app.models.Comentario.contacto_id" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.models.Comentario.fecha">
-<span class="sig-name descname"><span class="pre">fecha</span></span><a class="headerlink" href="#foro_app.models.Comentario.fecha" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">fecha</span></span><a class="headerlink" href="#foro_app.models.Comentario.fecha" title="Link to this definition">¶</a></dt>
 <dd><p>A wrapper for a deferred-loading field. When the value is read from this
 object the first time, the query is executed.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="foro_app.models.Comentario.get_next_by_fecha">
-<span class="sig-name descname"><span class="pre">get_next_by_fecha</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">fecha&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#foro_app.models.Comentario.get_next_by_fecha" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_next_by_fecha</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">fecha&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#foro_app.models.Comentario.get_next_by_fecha" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="foro_app.models.Comentario.get_previous_by_fecha">
-<span class="sig-name descname"><span class="pre">get_previous_by_fecha</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">fecha&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#foro_app.models.Comentario.get_previous_by_fecha" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_previous_by_fecha</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">fecha&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#foro_app.models.Comentario.get_previous_by_fecha" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.models.Comentario.id">
-<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#foro_app.models.Comentario.id" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#foro_app.models.Comentario.id" title="Link to this definition">¶</a></dt>
 <dd><p>A wrapper for a deferred-loading field. When the value is read from this
 object the first time, the query is executed.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.models.Comentario.objects">
-<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#foro_app.models.Comentario.objects" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#foro_app.models.Comentario.objects" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.models.Comentario.publicacion">
-<span class="sig-name descname"><span class="pre">publicacion</span></span><a class="headerlink" href="#foro_app.models.Comentario.publicacion" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">publicacion</span></span><a class="headerlink" href="#foro_app.models.Comentario.publicacion" title="Link to this definition">¶</a></dt>
 <dd><p>Accessor to the related object on the forward side of a many-to-one or
 one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
 <p>In the example:</p>
@@ -372,12 +266,12 @@ one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.models.Comentario.publicacion_id">
-<span class="sig-name descname"><span class="pre">publicacion_id</span></span><a class="headerlink" href="#foro_app.models.Comentario.publicacion_id" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">publicacion_id</span></span><a class="headerlink" href="#foro_app.models.Comentario.publicacion_id" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.models.Comentario.texto">
-<span class="sig-name descname"><span class="pre">texto</span></span><a class="headerlink" href="#foro_app.models.Comentario.texto" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">texto</span></span><a class="headerlink" href="#foro_app.models.Comentario.texto" title="Link to this definition">¶</a></dt>
 <dd><p>A wrapper for a deferred-loading field. When the value is read from this
 object the first time, the query is executed.</p>
 </dd></dl>
@@ -386,23 +280,23 @@ object the first time, the query is executed.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="foro_app.models.Publicacion">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">foro_app.models.</span></span><span class="sig-name descname"><span class="pre">Publicacion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contenido</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fecha</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/foro_app/models.html#Publicacion"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#foro_app.models.Publicacion" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">foro_app.models.</span></span><span class="sig-name descname"><span class="pre">Publicacion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contenido</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fecha</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/foro_app/models.html#Publicacion"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#foro_app.models.Publicacion" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
 <dl class="py exception">
 <dt class="sig sig-object py" id="foro_app.models.Publicacion.DoesNotExist">
-<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#foro_app.models.Publicacion.DoesNotExist" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#foro_app.models.Publicacion.DoesNotExist" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
 </dd></dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="foro_app.models.Publicacion.MultipleObjectsReturned">
-<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#foro_app.models.Publicacion.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#foro_app.models.Publicacion.MultipleObjectsReturned" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.models.Publicacion.autor">
-<span class="sig-name descname"><span class="pre">autor</span></span><a class="headerlink" href="#foro_app.models.Publicacion.autor" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">autor</span></span><a class="headerlink" href="#foro_app.models.Publicacion.autor" title="Link to this definition">¶</a></dt>
 <dd><p>Accessor to the related object on the forward side of a many-to-one or
 one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
 <p>In the example:</p>
@@ -415,12 +309,12 @@ one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.models.Publicacion.autor_id">
-<span class="sig-name descname"><span class="pre">autor_id</span></span><a class="headerlink" href="#foro_app.models.Publicacion.autor_id" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">autor_id</span></span><a class="headerlink" href="#foro_app.models.Publicacion.autor_id" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.models.Publicacion.chats">
-<span class="sig-name descname"><span class="pre">chats</span></span><a class="headerlink" href="#foro_app.models.Publicacion.chats" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">chats</span></span><a class="headerlink" href="#foro_app.models.Publicacion.chats" title="Link to this definition">¶</a></dt>
 <dd><p>Accessor to the related objects manager on the reverse side of a
 many-to-one relation.</p>
 <p>In the example:</p>
@@ -435,7 +329,7 @@ class built by <code class="docutils literal notranslate"><span class="pre">crea
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.models.Publicacion.comentarios">
-<span class="sig-name descname"><span class="pre">comentarios</span></span><a class="headerlink" href="#foro_app.models.Publicacion.comentarios" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">comentarios</span></span><a class="headerlink" href="#foro_app.models.Publicacion.comentarios" title="Link to this definition">¶</a></dt>
 <dd><p>Accessor to the related objects manager on the forward and reverse sides of
 a many-to-many relation.</p>
 <p>In the example:</p>
@@ -451,43 +345,43 @@ class built by <code class="docutils literal notranslate"><span class="pre">crea
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.models.Publicacion.contenido">
-<span class="sig-name descname"><span class="pre">contenido</span></span><a class="headerlink" href="#foro_app.models.Publicacion.contenido" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">contenido</span></span><a class="headerlink" href="#foro_app.models.Publicacion.contenido" title="Link to this definition">¶</a></dt>
 <dd><p>A wrapper for a deferred-loading field. When the value is read from this
 object the first time, the query is executed.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.models.Publicacion.fecha">
-<span class="sig-name descname"><span class="pre">fecha</span></span><a class="headerlink" href="#foro_app.models.Publicacion.fecha" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">fecha</span></span><a class="headerlink" href="#foro_app.models.Publicacion.fecha" title="Link to this definition">¶</a></dt>
 <dd><p>A wrapper for a deferred-loading field. When the value is read from this
 object the first time, the query is executed.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="foro_app.models.Publicacion.get_next_by_fecha">
-<span class="sig-name descname"><span class="pre">get_next_by_fecha</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">fecha&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#foro_app.models.Publicacion.get_next_by_fecha" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_next_by_fecha</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">fecha&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#foro_app.models.Publicacion.get_next_by_fecha" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="foro_app.models.Publicacion.get_previous_by_fecha">
-<span class="sig-name descname"><span class="pre">get_previous_by_fecha</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">fecha&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#foro_app.models.Publicacion.get_previous_by_fecha" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_previous_by_fecha</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">fecha&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#foro_app.models.Publicacion.get_previous_by_fecha" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.models.Publicacion.id">
-<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#foro_app.models.Publicacion.id" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#foro_app.models.Publicacion.id" title="Link to this definition">¶</a></dt>
 <dd><p>A wrapper for a deferred-loading field. When the value is read from this
 object the first time, the query is executed.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.models.Publicacion.objects">
-<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#foro_app.models.Publicacion.objects" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#foro_app.models.Publicacion.objects" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="foro_app.models.Publicacion.publicacion">
-<span class="sig-name descname"><span class="pre">publicacion</span></span><a class="headerlink" href="#foro_app.models.Publicacion.publicacion" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">publicacion</span></span><a class="headerlink" href="#foro_app.models.Publicacion.publicacion" title="Link to this definition">¶</a></dt>
 <dd><p>Accessor to the related objects manager on the reverse side of a
 many-to-one relation.</p>
 <p>In the example:</p>
@@ -504,54 +398,175 @@ class built by <code class="docutils literal notranslate"><span class="pre">crea
 
 </section>
 <section id="module-foro_app.tests">
-<span id="foro-app-tests-module"></span><h2>foro_app.tests module<a class="headerlink" href="#module-foro_app.tests" title="Link to this heading"></a></h2>
+<span id="foro-app-tests-module"></span><h2>foro_app.tests module<a class="headerlink" href="#module-foro_app.tests" title="Link to this heading">¶</a></h2>
 </section>
 <section id="module-foro_app.views">
-<span id="foro-app-views-module"></span><h2>foro_app.views module<a class="headerlink" href="#module-foro_app.views" title="Link to this heading"></a></h2>
+<span id="foro-app-views-module"></span><h2>foro_app.views module<a class="headerlink" href="#module-foro_app.views" title="Link to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="foro_app.views.crear_publicacion">
-<span class="sig-prename descclassname"><span class="pre">foro_app.views.</span></span><span class="sig-name descname"><span class="pre">crear_publicacion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/foro_app/views.html#crear_publicacion"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#foro_app.views.crear_publicacion" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">foro_app.views.</span></span><span class="sig-name descname"><span class="pre">crear_publicacion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/foro_app/views.html#crear_publicacion"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#foro_app.views.crear_publicacion" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="foro_app.views.foro">
-<span class="sig-prename descclassname"><span class="pre">foro_app.views.</span></span><span class="sig-name descname"><span class="pre">foro</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/foro_app/views.html#foro"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#foro_app.views.foro" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">foro_app.views.</span></span><span class="sig-name descname"><span class="pre">foro</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/foro_app/views.html#foro"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#foro_app.views.foro" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </section>
 <section id="module-foro_app">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-foro_app" title="Link to this heading"></a></h2>
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-foro_app" title="Link to this heading">¶</a></h2>
 </section>
 </section>
 
 
-           </div>
+            <div class="clearer"></div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="foro_app.migrations.html" class="btn btn-neutral float-left" title="foro_app.migrations package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Derechos de autor 2025, JM, AP, AO, GR.</p>
-  </div>
-
-  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
-    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
         </div>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Tabla de contenido</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">foro_app package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-foro_app.admin">foro_app.admin module</a></li>
+<li><a class="reference internal" href="#module-foro_app.apps">foro_app.apps module</a><ul>
+<li><a class="reference internal" href="#foro_app.apps.ForoAppConfig"><code class="docutils literal notranslate"><span class="pre">ForoAppConfig</span></code></a><ul>
+<li><a class="reference internal" href="#foro_app.apps.ForoAppConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">ForoAppConfig.default_auto_field</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.apps.ForoAppConfig.name"><code class="docutils literal notranslate"><span class="pre">ForoAppConfig.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-foro_app.forms">foro_app.forms module</a><ul>
+<li><a class="reference internal" href="#foro_app.forms.ComentarioForm"><code class="docutils literal notranslate"><span class="pre">ComentarioForm</span></code></a><ul>
+<li><a class="reference internal" href="#foro_app.forms.ComentarioForm.Meta"><code class="docutils literal notranslate"><span class="pre">ComentarioForm.Meta</span></code></a><ul>
+<li><a class="reference internal" href="#foro_app.forms.ComentarioForm.Meta.fields"><code class="docutils literal notranslate"><span class="pre">ComentarioForm.Meta.fields</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.forms.ComentarioForm.Meta.model"><code class="docutils literal notranslate"><span class="pre">ComentarioForm.Meta.model</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.forms.ComentarioForm.Meta.widgets"><code class="docutils literal notranslate"><span class="pre">ComentarioForm.Meta.widgets</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#foro_app.forms.ComentarioForm.base_fields"><code class="docutils literal notranslate"><span class="pre">ComentarioForm.base_fields</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.forms.ComentarioForm.declared_fields"><code class="docutils literal notranslate"><span class="pre">ComentarioForm.declared_fields</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.forms.ComentarioForm.media"><code class="docutils literal notranslate"><span class="pre">ComentarioForm.media</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#foro_app.forms.PublicacionForm"><code class="docutils literal notranslate"><span class="pre">PublicacionForm</span></code></a><ul>
+<li><a class="reference internal" href="#foro_app.forms.PublicacionForm.Meta"><code class="docutils literal notranslate"><span class="pre">PublicacionForm.Meta</span></code></a><ul>
+<li><a class="reference internal" href="#foro_app.forms.PublicacionForm.Meta.exclude"><code class="docutils literal notranslate"><span class="pre">PublicacionForm.Meta.exclude</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.forms.PublicacionForm.Meta.fields"><code class="docutils literal notranslate"><span class="pre">PublicacionForm.Meta.fields</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.forms.PublicacionForm.Meta.model"><code class="docutils literal notranslate"><span class="pre">PublicacionForm.Meta.model</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.forms.PublicacionForm.Meta.widgets"><code class="docutils literal notranslate"><span class="pre">PublicacionForm.Meta.widgets</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#foro_app.forms.PublicacionForm.base_fields"><code class="docutils literal notranslate"><span class="pre">PublicacionForm.base_fields</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.forms.PublicacionForm.declared_fields"><code class="docutils literal notranslate"><span class="pre">PublicacionForm.declared_fields</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.forms.PublicacionForm.media"><code class="docutils literal notranslate"><span class="pre">PublicacionForm.media</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-foro_app.models">foro_app.models module</a><ul>
+<li><a class="reference internal" href="#foro_app.models.Comentario"><code class="docutils literal notranslate"><span class="pre">Comentario</span></code></a><ul>
+<li><a class="reference internal" href="#foro_app.models.Comentario.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Comentario.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Comentario.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Comentario.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Comentario.contacto"><code class="docutils literal notranslate"><span class="pre">Comentario.contacto</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Comentario.contacto_id"><code class="docutils literal notranslate"><span class="pre">Comentario.contacto_id</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Comentario.fecha"><code class="docutils literal notranslate"><span class="pre">Comentario.fecha</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Comentario.get_next_by_fecha"><code class="docutils literal notranslate"><span class="pre">Comentario.get_next_by_fecha()</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Comentario.get_previous_by_fecha"><code class="docutils literal notranslate"><span class="pre">Comentario.get_previous_by_fecha()</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Comentario.id"><code class="docutils literal notranslate"><span class="pre">Comentario.id</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Comentario.objects"><code class="docutils literal notranslate"><span class="pre">Comentario.objects</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Comentario.publicacion"><code class="docutils literal notranslate"><span class="pre">Comentario.publicacion</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Comentario.publicacion_id"><code class="docutils literal notranslate"><span class="pre">Comentario.publicacion_id</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Comentario.texto"><code class="docutils literal notranslate"><span class="pre">Comentario.texto</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#foro_app.models.Publicacion"><code class="docutils literal notranslate"><span class="pre">Publicacion</span></code></a><ul>
+<li><a class="reference internal" href="#foro_app.models.Publicacion.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Publicacion.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Publicacion.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Publicacion.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Publicacion.autor"><code class="docutils literal notranslate"><span class="pre">Publicacion.autor</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Publicacion.autor_id"><code class="docutils literal notranslate"><span class="pre">Publicacion.autor_id</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Publicacion.chats"><code class="docutils literal notranslate"><span class="pre">Publicacion.chats</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Publicacion.comentarios"><code class="docutils literal notranslate"><span class="pre">Publicacion.comentarios</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Publicacion.contenido"><code class="docutils literal notranslate"><span class="pre">Publicacion.contenido</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Publicacion.fecha"><code class="docutils literal notranslate"><span class="pre">Publicacion.fecha</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Publicacion.get_next_by_fecha"><code class="docutils literal notranslate"><span class="pre">Publicacion.get_next_by_fecha()</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Publicacion.get_previous_by_fecha"><code class="docutils literal notranslate"><span class="pre">Publicacion.get_previous_by_fecha()</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Publicacion.id"><code class="docutils literal notranslate"><span class="pre">Publicacion.id</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Publicacion.objects"><code class="docutils literal notranslate"><span class="pre">Publicacion.objects</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.models.Publicacion.publicacion"><code class="docutils literal notranslate"><span class="pre">Publicacion.publicacion</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-foro_app.tests">foro_app.tests module</a></li>
+<li><a class="reference internal" href="#module-foro_app.views">foro_app.views module</a><ul>
+<li><a class="reference internal" href="#foro_app.views.crear_publicacion"><code class="docutils literal notranslate"><span class="pre">crear_publicacion()</span></code></a></li>
+<li><a class="reference internal" href="#foro_app.views.foro"><code class="docutils literal notranslate"><span class="pre">foro()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-foro_app">Module contents</a></li>
+</ul>
+</li>
+</ul>
 
-</body>
+  </div>
+  <div>
+    <h4>Tema anterior</h4>
+    <p class="topless"><a href="foro_app.migrations.html"
+                          title="capítulo anterior">foro_app.migrations package</a></p>
+  </div>
+  <div>
+    <h4>Próximo tema</h4>
+    <p class="topless"><a href="tests_app.migrations.html"
+                          title="próximo capítulo">tests_app.migrations package</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>Esta página</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/foro_app.rst.txt"
+            rel="nofollow">Mostrar el código</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Índice General"
+             >índice</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Índice de Módulos Python"
+             >módulos</a> |</li>
+        <li class="right" >
+          <a href="tests_app.migrations.html" title="tests_app.migrations package"
+             >siguiente</a> |</li>
+        <li class="right" >
+          <a href="foro_app.migrations.html" title="foro_app.migrations package"
+             >anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">documentación de Refugio Digital - 1.0</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">foro_app package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2025, JM, AP, AO, GR.
+      Creado usando <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
 </html>

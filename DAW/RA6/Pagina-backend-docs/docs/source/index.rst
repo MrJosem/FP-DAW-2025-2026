@@ -19,7 +19,7 @@ documentation for details.
    chat_app
    foro_app.migrations
    foro_app
-   test_app
    tests_app.migrations
-   usuarios.app
-   usuarios.app.migrations
+   tests_app
+   usuarios_app.migrations
+   usuarios_app
